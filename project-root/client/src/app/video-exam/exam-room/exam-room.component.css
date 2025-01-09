@@ -1,0 +1,48 @@
+/* Video grid container */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    border-radius: 10px;
+    background-color: #f0f4f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/* Video elements */
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay for the name display */
+.overlay {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Video hover effect */
+.video-container video:hover {
+    border-color: #4caf50;
+    transform: scale(1.02);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
