@@ -1,19 +1,20 @@
 {
-    "projects": {
-      "client": {
-        "rootDirectory": "client",
-        "buildCommand": "npx ng build --configuration=production",
-        "outputDirectory": "client/dist/<angular-project-name>"
+    "builds": [
+      {
+        "src": "client/package.json",
+        "use": "@vercel/node",
+        "config": {
+          "buildCommand": "npx ng build --configuration=production"
+        }
       },
-      "server": {
-        "rootDirectory": "server"
+      {
+        "src": "server/**",
+        "use": "@vercel/python"
       }
-    },
-    "build": {
-      "env": {
-        "NODE_VERSION": "16",
-        "NPM_VERSION": "8"
-      }
+    ],
+    "env": {
+      "NODE_VERSION": "16",
+      "NPM_VERSION": "8"
     }
   }
   
