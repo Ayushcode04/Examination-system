@@ -1,0 +1,19 @@
+{
+    "projects": {
+      "client": {
+        "rootDirectory": "client",
+        "buildCommand": "npx ng build --configuration=production",
+        "outputDirectory": "client/dist/<angular-project-name>"
+      },
+      "server": {
+        "rootDirectory": "server"
+      }
+    },
+    "build": {
+      "env": {
+        "NODE_VERSION": "16",
+        "NPM_VERSION": "8"
+      }
+    }
+  }
+  
